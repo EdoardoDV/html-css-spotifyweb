@@ -19,7 +19,19 @@ a {
   margin:0;
   padding: 0;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
 h2 {
+  font-size: 15px;
+  color: white;
+}
+h3 {
+  display: inline-block;
   font-size: 15px;
 }
 /* Fine Stili Generici */
@@ -50,6 +62,7 @@ h2 {
   position:absolute;
   display: flex;
   flex-direction: column;
+  color: #A3A3A3;
   width: 300px;
   height: calc(100% - 100px);
   background: black;
@@ -64,18 +77,40 @@ h2 {
   flex-shrink: 0;
 }
 .logo img {
+  display: inline-block;
   height: 40px;
   margin-left: 15px;
 }
 /* Fine Logo */
+/* Menu */
 .list {
-  height: 200px;
   flex-grow: 0;
   flex-shrink: 0;
 }
+.green {
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  margin-right: 10px;
+  background: #ADFF2F;
+  opacity: 0;
+}
+.list h3 {
+  vertical-align: 5px;
+  margin-left: 5px;
+}
+.list img {
+  height: 25px;
+  line-height: 25px;
+  color: #A3A3A3;
+}
+/* Fine Menu */
+/* Playlist */
 .playlist {
   height: 500px;
   overflow: scroll;
+  padding-left: 13px;
+  margin-top: 10px;
 }
 .account {
   height: 100px;
@@ -119,4 +154,13 @@ h2 {
 /* Fine Media Query */
 
 /* Hover Options */
+  /* Upper Bar */
+  /* Fine Upper Bar */
+  /* Sidebar */
+  /* Menu */
+  .list li:hover > .green {
+    /* opacity:1; */
+  }
+  /* Fine Menu */
+  /* Fine Sidebar */
 /* Fine Hover Options */
