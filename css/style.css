@@ -112,6 +112,35 @@ h3 {
   padding-left: 13px;
   margin-top: 10px;
 }
+.playlist li h2 {
+  color: grey;
+  display: inline-block;
+  vertical-align: calc(28px * 0.66);
+}
+.playlist li>div{
+  margin: 10px 0;
+  margin-right: 8px;
+  position:relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: lightgrey;
+}
+.playlist li>div>div{
+  width: 4px;
+  height: 16px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.playlist li>div div:last-of-type{
+  width: 16px;
+  height: 4px;
+  background: black;
+}
+/* Fine PLaylist */
 .account {
   height: 100px;
   flex-grow: 0;
