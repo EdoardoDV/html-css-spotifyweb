@@ -1,84 +1,122 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
 }
-
-.blue {
-  background: blue;
+body {
+  font-family: 'Lato', sans-serif;
+}
+/* FINE RESET */
+/* Stili Generici */
+.bar {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  margin:0;
+  padding: 0;
+}
+h2 {
+  font-size: 15px;
+}
+/* Fine Stili Generici */
+/* Upper Bar */
+#upper {
+  background: rgba(110, 110, 110, 0.2);
+  color:white;
   top: 0;
   z-index: 1;
 }
-.darkblue {
-  background: darkblue;
-  bottom: 0;
-  display: flex;
-  z-index: 3;
-}
-.orange_upgrade{
-  background: orange;
+.upgrade{
   float: right;
   height: 150px;
   width: 300px;
 }
-.bar {
-  position: fixed;
-  width: 100%;
-  height: 150px;
+.upgrade .button {
+  height: 40px;
+  width: 250px;
+  line-height: 40px;
+  margin: 28px 25px;
+  text-align:center;
+  border: 2px solid white;
+  border-radius: 50px;
 }
-.red_side {
+/* Fine Upper Bar */
+/* Sidebar Menu */
+#sidebar {
   position:absolute;
   display: flex;
   flex-direction: column;
-  width: 150px;
-  height: calc(100% - 150px);
-  background: red;
+  width: 300px;
+  height: calc(100% - 100px);
+  background: black;
   z-index:2;
 }
-.black_logo{
-  height: 150px;
+/* Logo */
+.logo{
+  height: 100px;
+  line-height: 100px;
   background: black;
   flex-grow: 0;
   flex-shrink: 0;
 }
-.green_list {
+.logo img {
+  height: 40px;
+  margin-left: 15px;
+}
+/* Fine Logo */
+.list {
   height: 200px;
-  background:green;
   flex-grow: 0;
   flex-shrink: 0;
 }
-.yellow_playlist {
+.playlist {
   height: 500px;
-  background: yellow;
   overflow: scroll;
 }
-.lightblue_account {
+.account {
   height: 100px;
-  background: lightblue;
   flex-grow: 0;
   flex-shrink: 0;
 }
-.white_listening {
-  width: 300px;
-  flex-shrink: 0;
-  background: white;
-}
-.grey_buttons {
-  width: calc(100%-600px);
-  flex-grow:2;
-  background: grey;
-}
-.white_options {
-  width: 300px;
-  flex-shrink:0;
-  background:lightgrey;
-}
-.black_main {
-  background:black;
+/* Fine Sidebar Menu */
+/* Main Section */
+#selections {
+  background:#141922;
   position:absolute;
-  top: 150px;
   display:flex;
-  margin-left: 150px;
-  height:calc(100vh - 300px);
-  width:calc(100% - 150px);
+  margin-left: 300px;
+  height:calc(100vh - 100px);
+  width:calc(100% - 300px);
   overflow:scroll;
 }
+/* Fine Main Section */
+/* Bottom Bar */
+#bottom {
+  background: #282828;
+  bottom: 0;
+  display: flex;
+  z-index: 3;
+}
+.listening {
+  width: 300px;
+  flex-shrink: 0;
+}
+.buttons {
+  width: calc(100%-600px);
+  flex-grow:2;
+}
+.options {
+  width: 300px;
+  flex-shrink:0;
+}
+/* Fine Bottom Bar */
+
+/* Media Query */
+/* Fine Media Query */
+
+/* Hover Options */
+/* Fine Hover Options */
