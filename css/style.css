@@ -26,6 +26,9 @@ ul {
 li {
   list-style: none;
 }
+h1 {
+  color: white;
+}
 h2 {
   font-size: 15px;
   color: white;
@@ -33,6 +36,7 @@ h2 {
 h3 {
   display: inline-block;
   font-size: 14px;
+  color:grey;
 }
 h4 {
   font-size: 12px;
@@ -88,6 +92,7 @@ h4 {
 /* Fine Logo */
 /* Menu */
 .list {
+  height: 100px;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -114,7 +119,7 @@ h4 {
 /* Fine Menu */
 /* Playlist */
 .playlist {
-  height: 500px;
+  height: calc(100% - 300px);
   overflow: scroll;
   padding-left: 12px;
   margin-top: 10px;
@@ -155,11 +160,10 @@ h4 {
   flex-shrink: 0;
   padding-left: 12px;
   padding-right: 12px;
-
 }
 .account .download {
-  padding-top: 16px;
   border-bottom: 1px solid grey;
+  padding-top: 15px;
 }
 .account img {
   height: 25px;
@@ -185,6 +189,7 @@ h4 {
   margin-left: 200px;
   height:calc(100vh - 100px);
   width:calc(100% - 200px);
+  overflow: scroll;
 }
 /* Blank Space */
 .blank {
@@ -207,7 +212,7 @@ h4 {
   width: 50px;
   opacity:0;
 }
-.navigation>div:first-child>div .hor_green{
+.navigation div:first-child div .hor_green{
   opacity: 1;
 }
 .navigation h2 {
@@ -217,6 +222,31 @@ h4 {
   color: grey;
 }
 /* Fine Navigation */
+/* Sector */
+.sector {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.sector .title_list {
+  margin: 25px 0;
+  margin-left: 15px;
+}
+.item_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.item img {
+  height:200px;
+}
+.item {
+  margin: 0 15px;
+  max-width: 200px;
+}
+.sector:last-of-type img {
+  border-radius: 50%;
+}
 /* Fine Main Section */
 /* Bottom Bar */
 #bottom {
