@@ -32,7 +32,11 @@ h2 {
 }
 h3 {
   display: inline-block;
-  font-size: 15px;
+  font-size: 14px;
+}
+h4 {
+  font-size: 12px;
+  color: grey;
 }
 /* Fine Stili Generici */
 /* Upper Bar */
@@ -109,10 +113,10 @@ h3 {
 .playlist {
   height: 500px;
   overflow: scroll;
-  padding-left: 13px;
+  padding-left: 12px;
   margin-top: 10px;
 }
-.playlist li h2 {
+.playlist li h3 {
   color: grey;
   display: inline-block;
   vertical-align: calc(28px * 0.66);
@@ -141,11 +145,36 @@ h3 {
   background: black;
 }
 /* Fine PLaylist */
+/* Account */
 .account {
   height: 100px;
   flex-grow: 0;
   flex-shrink: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+
 }
+.account .download {
+  padding-top: 16px;
+  border-bottom: 1px solid grey;
+}
+.account img {
+  height: 25px;
+}
+.account h3 {
+  vertical-align: 8px;
+}
+.account .profile {
+  padding-top: 8px;
+  color: white;
+}
+.account .profile img {
+  margin:0 3px;
+  background:grey;
+  padding: 1px 2px;
+  border-radius:50%;
+}
+/* Fine Account */
 /* Fine Sidebar Menu */
 /* Main Section */
 #selections {
@@ -165,10 +194,26 @@ h3 {
   display: flex;
   z-index: 3;
 }
+/* Titolo In Ascolto */
 .listening {
   width: 300px;
   flex-shrink: 0;
 }
+.listening img {
+  height: 60px;
+  display: inline-block;
+  margin: 20px 0;
+  margin-left: 12px;
+}
+.listening .tag {
+  display: inline-block;
+  vertical-align: 35px;
+  margin-left: 12px;
+}
+.listening .tag h4:first-child {
+  color:white;
+}
+/* Fine Titolo In Ascolto */
 .buttons {
   width: calc(100%-600px);
   flex-grow:2;
