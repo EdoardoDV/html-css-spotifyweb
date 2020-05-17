@@ -60,6 +60,7 @@ h4 {
   width: 250px;
   line-height: 40px;
   margin: 28px 25px;
+  font-size: inherit;
   text-align:center;
   border: 2px solid white;
   border-radius: 50px;
@@ -175,6 +176,9 @@ h4 {
 .account h3 {
   vertical-align: 8px;
 }
+.profile h3 {
+  color: white;
+}
 .account .profile {
   padding-top: 8px;
   color: white;
@@ -242,15 +246,34 @@ h4 {
   flex-shrink: 1;
   text-align: center;
 }
+.item .overlay{
+  opacity: 0;
+  position: absolute;
+  font-size: 35px;
+  line-height: calc((100vw - 200px) / 6);
+  width: calc((100vw - 200px) / 6);
+  max-width:200px;
+  height: calc((100vw - 200px) / 6);
+  max-height: 200px;
+  color: white;
+  top: 0;
+  right: 0;
+  z-index:1;
+  background: rgba(0, 0, 0, 0.5);
+}
 .item img {
   width: calc((100vw - 200px) / 6);
   max-width:200px;
 }
 .item {
+  position: relative;
   margin: 0 5px;
   max-width: 200px;
 }
 .sector:last-of-type img {
+  border-radius: 50%;
+}
+.sector:last-of-type .overlay {
   border-radius: 50%;
 }
 /* Fine Sector */
@@ -385,6 +408,9 @@ background: grey;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .item .overlay {
+    display: none;
+  }
   .item img {
     width:200px;
   }
@@ -473,6 +499,9 @@ background: grey;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .item .overlay {
+    display: none;
+  }
   .item img {
     width:120px;
   }
@@ -497,7 +526,21 @@ background: grey;
 /* Fine Media Query */
 
 /* Hover Options */
+  h2:hover, h3:hover, i:hover {
+    color: white;
+  }
   /* Upper Bar */
+  .upgrade .button:hover {
+    height: 50px;
+    width: 260px;
+    line-height: 50px;
+    margin: 23px 20px;
+    font-size: 16px;
+    text-align:center;
+    border: 2px solid white;
+    border-radius: 50px;
+  }
+
   /* Fine Upper Bar */
   /* Sidebar */
   /* Menu */
@@ -507,6 +550,12 @@ background: grey;
   /* Fine Menu */
   /* Fine Sidebar */
   /* Main Selections */
+  #selections h3:hover {
+    color:grey;
+  }
+  .item:hover > .overlay {
+    opacity: 1;
+  }
   /* Navigation */
   .navigation div:hover > .hor_green{
     /* opacity:1; */
