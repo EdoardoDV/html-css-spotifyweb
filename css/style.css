@@ -76,7 +76,11 @@ h4 {
   background: black;
   z-index:2;
 }
+
 /* Logo */
+.logo_xs {
+  display: none;
+}
 .logo{
   height: 100px;
   line-height: 100px;
@@ -229,24 +233,27 @@ h4 {
 }
 .sector .title_list {
   margin: 25px 0;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 .item_list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
   text-align: center;
 }
 .item img {
-  height:200px;
+  width: calc((100vw - 200px) / 6);
+  max-width:200px;
 }
 .item {
-  margin: 0 15px;
+  margin: 0 5px;
   max-width: 200px;
 }
 .sector:last-of-type img {
   border-radius: 50%;
 }
+/* Fine Sector */
 /* Fine Main Section */
 /* Bottom Bar */
 #bottom {
@@ -257,13 +264,12 @@ h4 {
 }
 /* Titolo In Ascolto */
 .listening {
-  width: 300px;
-  flex-shrink: 0;
+  width: calc(100%/4);
 }
 .listening img {
-  height: 60px;
+  height: 35px;
   display: inline-block;
-  margin: 20px 0;
+  margin: calc(65px/2) 0;
   margin-left: 12px;
 }
 .listening .tag {
@@ -271,32 +277,39 @@ h4 {
   vertical-align: 35px;
   margin-left: 12px;
 }
+h4 {
+  font-size: 10px;
+}
 .listening .tag h4:first-child {
   color:white;
 }
 .listening .icons {
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 2%;
   vertical-align: 35px;
 }
 /* Fine Titolo In Ascolto */
 /* Gestione */
 .buttons {
-  width: calc(100%-600px);
-  flex-grow:2;
+  width: calc(100%/4) * 2;
+  flex-grow:1;
+  flex-shrink:1;
+  flex-wrap: nowrap;
   text-align: center;
+}
+.buttons ul {
+  margin: 20px auto;
+  width: 66%;
 }
 .buttons li {
   display: inline-block;
-  font-size: 12px;
-  padding: 0 5px;
+  font-size: 8px;
+  padding: 0 2%;
   color: lightgrey;
-  margin: 20px 0;
 }
 .buttons .fa-play {
   border: 2px solid lightgrey;
   border-radius: 60%;
-  padding: 0 10px;
   padding: 4px 5px;
   padding-bottom: 6px;
   padding-left: 7px;
@@ -308,7 +321,8 @@ h4 {
 }
 .playin>div>div{
 height: 3px;
-width: 66%;
+width: 70%;
+margin: 0 auto;
 background: grey;
 }
 .playin>div>div::before {
@@ -330,29 +344,156 @@ background: grey;
 /* Fine Gestione */
 /* Opzioni Audio */
 .options {
-  width: 300px;
+  width: calc(100%/4);
+  font-size: 7px;
   flex-shrink:0;
   color: lightgrey;
-  text-align: right;
+  text-align: left;
 }
 .options li{
   display: inline-block;
   padding: 0 5px;
-  margin: 40px 0;
+  margin: 46px 0;
 }
 
-.options li>div {
-  width: 100px;
+.options div {
+  width: 14%;
   display: inline-block;
   background: lightgrey;
-  height: 3px;
-  vertical-align: 4px;
+  height: 2px;
   margin-right: 12px;
+  position: absolute;
+  top:50%;
+  right: 3%;
 }
 /* Fine Opzioni Audio */
 /* Fine Bottom Bar */
 
 /* Media Query */
+@media screen and (min-width:415px) and (max-width:767px) {
+  h2 {
+    font-size: 10px;
+  }
+  /* Upper Bar */
+  .upgrade .button {
+    width: 140px;
+    margin: 28px 80px;
+  }
+  /* Fine Upper Bar */
+  /* Main */
+  .item_list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item img {
+    width:200px;
+  }
+  .item {
+    margin: 0 10px;
+    margin-bottom: 5px;
+  }
+  /* Fine Main */
+  /* Bottom Bar */
+  .listening {
+  }
+  .listening img{
+    margin: calc(65px/2) 0;
+    margin-left: 12px;
+    height: 35px;
+  }
+  .listening .tag {
+    vertical-align: 35px;
+  }
+  .buttons ul {
+    width: 100%;
+  }
+  .playin>div>div::before {
+    font-size: 5px;
+  }
+  .playin>div>div::after {
+    font-size: 5px;
+  }
+  .options div {
+    display: none;
+  }
+}
+@media screen and (max-width:414px) {
+  h2 {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 8px;
+  }
+  /* Upper Bar */
+  .upgrade .button {
+    width: 140px;
+    margin: 28px 80px;
+  }
+  /* Fine Upper Bar */
+  /* Sidebar */
+  #sidebar {
+    width: 40px;
+  }
+  #sidebar .playlist{
+    visibility:hidden;
+    height: calc(100% - 225px);
+  }
+  #sidebar h3 {
+    display:none;
+  }
+  .logo {
+    display: none;
+  }
+  .logo_xs {
+    display: block;
+    height: 40px;
+  }
+  .logo_xs img {
+    height: 25px;
+    padding: calc(15px/2);
+  }
+  .account {
+    height: 25px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .account .download img{
+    padding-left: 2px;
+  }
+  .account img {
+    height: 15px;
+  }
+  /* Fine Sidebar */
+  /* Main */
+  #selections{
+    width: calc(100vw - 40px);
+    margin-left: 40px;
+  }
+  .item_list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item img {
+    width:120px;
+  }
+  .item {
+    margin: 0 10px;
+    max-width: 120px;
+    margin-bottom: 5px;
+  }
+  /* Fine Main */
+  /* Bottom Bar */
+  .listening .tag{
+    display: none;
+  }
+  .listening .icons{
+    display: none;
+  }
+  .options div {
+    display: none;
+  }
+  /* Fine Bottom Bar */
+}
 /* Fine Media Query */
 
 /* Hover Options */
